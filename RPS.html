@@ -9,6 +9,7 @@
   </head>
   <body>
 	<script>
+        let userChoice = prompt('please type: rock, paper, or scissors')
         const  getHumanChoice = userInput => {
             userInput = userInput .toLowerCase();
             if (userInput === 'rock' || userInput === 'paper' || userInput === "scissors") {
@@ -57,8 +58,16 @@
             }
         };
 
-        console.log(pickWinner('rock', 'scissors'));
+        const playGame = () => {
+            const userChoice = getHumanChoice('paper');
+            const computerChoice = getComputerChoice();
+            console.log('You choose: ' + userChoice)
+            console.log('computer choose: ' + computerChoice);
 
+            console.log(pickWinner(userChoice, computerChoice));
+        };
+
+        playGame()
     </script>
   </body>
 </html>
