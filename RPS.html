@@ -29,9 +29,35 @@
                     return 'scissors';
             }
         };
-            console.log(getComputerChoice());
-            console.log(getComputerChoice());
-            console.log(getComputerChoice());
+         
+        const pickWinner = (userChoice, computerChoice) => {
+            if (userChoice === computerChoice) {
+                return 'You think like a computer, we tie';
+            }
+            if (userChoice === 'rock') {
+                if (computerChoice === 'paper') {
+                    return 'You are a mere mortal and you can not beat me!';
+                } else {
+                    return 'Blast you have foiled me, You Win';
+                }
+            }
+            if (userChoice === 'paper') {
+                if (computerChoice === 'scissors') {
+                    return 'Human you have no chance I win!';
+                } else {
+                    return 'Fine Fine Fine... you got lucky, You Win';
+                }
+            }
+            if (userChoice === 'scissors') {
+                if (computerChoice === 'rock') {
+                    return 'HA HA HA you never had a chance';
+                } else {
+                    return 'WHAT how is this possible your power level is over 9000';
+                }
+            }
+        };
+
+        console.log(pickWinner('rock', 'scissors'));
 
     </script>
   </body>
